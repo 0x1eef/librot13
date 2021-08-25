@@ -45,7 +45,7 @@ and headers are installed `gcc -lrot13` can be used for linking the shared libra
 
 Optionally compile and run the example 
 
-    gcc -lrot13 examples/example.c example
+    gcc -lrot13 examples/example.c -o example
     ./example
 
 **Uninstall**
