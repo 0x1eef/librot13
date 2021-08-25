@@ -59,6 +59,7 @@ rot13(const char *str)
         if(tolower(c) == ROT13_ALPHABET[j])
         {
           result[i] = toupper(rot13_get_char(j));
+          break;
         }
       }
       /* lowercase ascii chars */
@@ -67,6 +68,7 @@ rot13(const char *str)
         if(c == ROT13_ALPHABET[j])
         {
           result[i] = rot13_get_char(j);
+          break;
         }
       }
     }
