@@ -4,7 +4,7 @@
 
 * <a href='#introduction'>Introduction</a>
 * <a href='#usage'>Usage</a>
-* <a href='#build'>Build</a>
+* <a href='#install'>Install</a>
 * <a href='#license'>License</a>
 
 ## <a id='introduction'>Introduction</a>
@@ -19,7 +19,7 @@ on Linux.
 ```C
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/rot13.h"
+#include <rot13.h>
 
 int
 main() 
@@ -31,19 +31,26 @@ main()
 }
 ```
 
-## <a id='build'>Build</a>
+## <a id='install'>Install / uninstall</a>
 
-For now there is no install step.  
-Instead the `Makefile` will create `librot13.so` in the project-local `build/` 
-directory and from there it can be linked to during compilation. For example:
+**Install**
+
+The install process is specific to Linux for now. After the shared library 
+and headers are installed `gcc -lrot13` can be used for linking the shared library.
 
     git clone https://github.com/0x1eef/librot13
     cd librot13
     make
-    gcc -Lbuild -lrot13 examples/example.c -o examples/example 
-    ./examples/example
+    sudo make install
 
+Optionally compile and run the example 
 
+    gcc -lrot13 examples/example.c example
+    ./example
+
+**Uninstall**
+
+    sudo make uninstall
 
 ## <a id='license'>License</a>
 

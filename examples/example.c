@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../src/rot13.h"
+#include <rot13.h>
 
 int
 main() {
