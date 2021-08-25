@@ -36,7 +36,9 @@ main()
 **Install**
 
 The install process is specific to Linux for now. After the shared library 
-and headers are installed `gcc -lrot13` can be used for linking the shared library.
+and headers are installed `gcc -lrot13` can be used for linking the shared 
+library. By default headers are installed to `/usr/local/include` and the 
+shared library is installed to `/usr/local/lib`.
 
     git clone https://github.com/0x1eef/librot13
     cd librot13
