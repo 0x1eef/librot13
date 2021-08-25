@@ -74,5 +74,6 @@ rot13(const char *str)
     }
   }
 
+  result[strlen(result)] = '\0';
   return result;
 }
