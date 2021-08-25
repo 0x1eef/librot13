@@ -22,13 +22,19 @@ on Linux.
 #include <rot13.h>
 
 int
-main() 
-{
-  char *str = rot13("Hello world");
-  printf("%s\n", str);
-  free(str);
+main() {
+  char *str1, *str2;
+
+  str1 = rot13("Hello world");
+  str2 = rot13(str1);
+  printf("encoded: %s\n", str1);
+  printf("decoded: %s\n", str2);
+  free(str1);
+  free(str2);
+
   return 0;
 }
+
 ```
 
 ## <a id='install'>Install / uninstall</a>
@@ -47,8 +53,8 @@ shared library is installed to `/usr/local/lib`.
 
 Optionally compile and run the example 
 
-    gcc -lrot13 examples/example.c -o example
-    ./example
+    gcc -lrot13 examples/example.c -o tmp/example
+    ./tmp/example
 
 **Uninstall**
 

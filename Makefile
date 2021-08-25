@@ -18,5 +18,9 @@ install:
 uninstall:
 	rm $(libdir)/$(soname) $(includedir)/rot13.h
 
+example:
+	gcc -lrot13 examples/example.c -o tmp/example
+	./tmp/example
+
 clean:
 	rm -rf $(builddir)
