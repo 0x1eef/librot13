@@ -10,7 +10,7 @@
 ## <a id='introduction'>Introduction</a>
 
 librot13 is a shared library written in C that implements the 
-[rot13 substitution cipher](https://en.wikipedia.org/wiki/ROT13).  
+[rot13 substitution cipher](https://en.wikipedia.org/wiki/ROT13).
 It was written for fun and to learn more about C and shared libraries
 on Linux.
 
