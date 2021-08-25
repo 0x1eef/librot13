@@ -24,11 +24,7 @@ char
 rot13_get_char(int j) {
   int index = j + 13;
 
-  if(index == ROT13_ALPHABET_LENGTH)
-  {
-    index = 0;
-  }
-  else if (index > ROT13_ALPHABET_LENGTH)
+  if(index >= ROT13_ALPHABET_LENGTH)
   {
     index = index - ROT13_ALPHABET_LENGTH;
   }
@@ -40,9 +36,10 @@ extern
 char*
 rot13(const char *str)
 {
-  char *result = malloc(strlen(str));
+  size_t strlength = strlen(str);
+  char *result  = malloc(strlength + 1);
 
-  for(int i = 0; i < strlen(str); i++)
+  for(int i = 0; i < strlength; i++)
   {
     char c = str[i];
     /* non-alpha chars are left untouched */
@@ -53,8 +50,8 @@ rot13(const char *str)
     }
     for(int j = 0; j < ROT13_ALPHABET_LENGTH; j++)
     {
-      /* uppercase ascii chars */
-      if(c >= 65 && c <= 90)
+      /* uppercase alphabet char */
+      if(isupper(c))
       {
         if(tolower(c) == ROT13_ALPHABET[j])
         {
@@ -62,8 +59,8 @@ rot13(const char *str)
           break;
         }
       }
-      /* lowercase ascii chars */
-      else if (c >= 97 && c <= 122)
+      /* lowercase alphabet char */
+      else
       {
         if(c == ROT13_ALPHABET[j])
         {
@@ -73,7 +70,7 @@ rot13(const char *str)
       }
     }
   }
+  result[strlength] = '\0';
 
-  result[strlen(result)] = '\0';
   return result;
 }

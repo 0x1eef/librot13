@@ -6,7 +6,7 @@ int
 main() {
   char *str1, *str2;
 
-  str1 = rot13("Hello world");
+  str1 = rot13("Hello world(s) and everything in between");
   str2 = rot13(str1);
   printf("encoded: %s\n", str1);
   printf("decoded: %s\n", str2);
