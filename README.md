@@ -4,7 +4,7 @@
 
 * <a href='#introduction'>Introduction</a>
 * <a href='#usage'>Usage</a>
-* <a href='#install'>Install</a>
+* <a href='#install'>Install / uninstall</a>
 * <a href='#license'>License</a>
 
 ## <a id='introduction'>Introduction</a>
